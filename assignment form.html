@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Confirm Purchase</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="styles.js"></script>
+
+</head>
+<body>
+	<form>
+	<div class="container">
+	   <h1>Confirm Purchase</h1>
+	   <div class="first-row">
+	   <div class="owner">
+		  <h3>Owner</h3>
+		 <div class="input-field">
+			<input type="text" name="cardowner" id="cardowner">
+	   	 </div>
+	  </div>
+	   <div class="cvv">
+		   <h3>cvv</h3>
+		 <div class="input-field">
+			<input type="password" name="cvv" id="cvv">
+	  	 </div>
+	   </div>
+	</div>
+	   <div class="second-row">
+	   	<div class="card-number">
+			<label for="cnnumber"><h3>Card Number</h3></label>
+			 <div class="input-field">
+			<input type="text" name="card-number" id="cn">
+	   		 </div>
+	  </div>
+	</div>
+<div class="third-row">
+		<h3>Expiration Date</h3>
+	    <div class="selection">
+		    <div class="date">
+                <select name="months" id="months">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>   
+                </select>
+
+                <select name="years" id="years">
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+		   <option value="2022">2022</option>
+		  <option value="2023">2023</option>
+		  </select>
+            </div>
+        <div class="cards">
+          <img src="file:///C:/images/vsa.png" alt="Visa">
+          <img src="file:///C:/images/mc.png" alt="Mastercard">
+          <img src="file:///C:/images/am.png" alt="American Express">
+        </div>
+    </div>
+</div>
+<input type="button" value="Confirm" id="sub" onclick="return formvalidation()">
+	</div>
+	</form>
+</body>
+</html>
+
