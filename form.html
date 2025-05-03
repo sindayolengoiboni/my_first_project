@@ -1,77 +1,116 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Get identity</title>
+  <meta charset="UTF-8">
+  <title>Customer Order Form</title>
+  <style>
+    body {
+      background-color: #E6E6FA;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      width: 50%;
+      margin: auto;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body bgcolor="#E6E6FA">
-<p><b>Customer order form</b></p>
-<form method="post" action="mailto:paulinesindayo@gmail.com">
-<p><b> Name:</b>
-  <input type="text" name="textfield">
-</p>
+<body>
+  <h2 style="text-align:center;">Customer Order Form</h2>
+  <form method="post" action="mailto:paulinesindayo@gmail.com?subject=Customer%20Order" enctype="text/plain">
+    
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-<p><b>Email address:</b>
-  <input type="text" email="email textfield">
-</p>
+      <label for="email">Email address:</label>
+      <input type="email" id="email" name="email" required>
 
-<p><b> Gender:</b>
-   <input type="radio" name="gender" value="m"> Male
-   <input type="radio" name="gender" value="f"> Female
-</p>
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+    </fieldset>
 
-<p><b> choose your pizza size</b>
-   <input type="radio" name="choose pizza size" value="L"> Large
-   <input type="radio" name="choose pizza size" value="M"> Medium
-   <input type="radio" name="choose pizza size" value="S"> Small
-</p>
+    <fieldset>
+      <legend>Order Details</legend>
+      <label>Pizza Size:</label>
+      <input type="radio" id="pizza-large" name="pizza_size" value="Large">
+      <label for="pizza-large">Large</label>
+      <input type="radio" id="pizza-medium" name="pizza_size" value="Medium">
+      <label for="pizza-medium">Medium</label>
+      <input type="radio" id="pizza-small" name="pizza_size" value="Small">
+      <label for="pizza-small">Small</label>
 
-<p><b> Choose the ice cream size</b>
-   <input type="radio" name="choose ice cream size" value="L"> Large
-   <input type="radio" name="choose ice cream size" value="M"> Medium
-   <input type="radio" name="choose ice cream size" value="S"> Small
-</p>
+      <label>Ice Cream Size:</label>
+      <input type="radio" id="icecream-large" name="ice_cream_size" value="Large">
+      <label for="icecream-large">Large</label>
+      <input type="radio" id="icecream-medium" name="ice_cream_size" value="Medium">
+      <label for="icecream-medium">Medium</label>
+      <input type="radio" id="icecream-small" name="ice_cream_size" value="Small">
+      <label for="icecream-small">Small</label>
 
-<p><b> Choose your favourite flavour</b>
- <input type="checkbox" id="vanilla" name= "vanilla" value="vanilla">
- <label for="vanilla"> vanilla</label>
- <input type="checkbox" id="chocolate" name= "chocolate" value="chocolate">
- <label for="chocolate"> chocolate</label> 
- <input type="checkbox" id="strawberry" name= "strawberry" value="strawberry">
- <label for="strawberry"> strawberry</label>
-</p>
+      <label>Favourite Flavour(s):</label>
+      <input type="checkbox" id="vanilla" name="flavour" value="Vanilla">
+      <label for="vanilla">Vanilla</label>
+      <input type="checkbox" id="chocolate" name="flavour" value="Chocolate">
+      <label for="chocolate">Chocolate</label>
+      <input type="checkbox" id="strawberry" name="flavour" value="Strawberry">
+      <label for="strawberry">Strawberry</label>
+    </fieldset>
 
+    <fieldset>
+      <legend>Payment and Delivery</legend>
+      <label for="payment">Mode of Payment:</label>
+      <select id="payment" name="payment_method" required>
+        <option value="">--Select--</option>
+        <option value="ATM card">ATM Card</option>
+        <option value="Mpesa">Mpesa</option>
+        <option value="Cash">Cash</option>
+      </select>
 
-<p> 
-  <b><label for="cars">Choose mode of payment:</label></b>
-    <select id="mode of payment" name ="mode of payment">
-    <option value="Atm ">Atm card</option>
-    <option value="mpesa">mpesa</option>
-    <option value="cash">cash</option>
-    </select>
-</p>
+      <label for="destination">Delivery Destination:</label>
+      <select id="destination" name="delivery_area" required>
+        <option value="">--Select--</option>
+        <option value="Kayole">Kayole</option>
+        <option value="Siaya">Siaya</option>
+        <option value="Kiambu">Kiambu</option>
+      </select>
+    </fieldset>
 
-<p> Area
-     <b><label for="cars">Choose destination for dropping the item:</label></b>
-     <select id="destination" name ="destination">
-     <option value="kayole">kayole</option>
-     <option value="siaya">siaya</option>
-     <option value="kiambu">kiambu</option>
-     </select>
-</p>
+    <fieldset>
+      <legend>Browser Used</legend>
+      <label for="browser">Choose your browser:</label>
+      <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+      </datalist>
+    </fieldset>
 
-<p><b> the datalist Element</b>
-<input list="browsers" name="browser">
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-  </datalist>
-</p>
-
-<p>
-<input type="submit">
-</p>
- </form>
-
+    <p style="text-align:center;">
+      <input type="submit" value="Submit Order">
+    </p>
+  </form>
 </body>
 </html>
